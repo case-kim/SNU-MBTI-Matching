@@ -87,6 +87,7 @@ class SignUpDialog extends Component {
         authentication.signUpWithEmailAddressAndPassword(emailAddress, password).then((value) => {
           this.props.dialogProps.onClose();
         }).catch((reason) => {
+          console.log(reason);
           const code = reason.code;
           const message = reason.message;
 
